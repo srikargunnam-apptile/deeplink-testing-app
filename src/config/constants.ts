@@ -1,26 +1,20 @@
 // App configuration constants
 
 // App info
-export const APP_NAME = "Minimal Base";
+export const APP_NAME = "Skandi Apparel";
 export const APP_VERSION = "1.0.0";
 
 // API configuration
 export const API_URL = process.env.EXPO_PUBLIC_API_URL || "http://localhost:3000";
-
-// LiveLayer (remote per-env config) — endpoint hosts manifest + config
-// bodies under `<endpoint>/<codePushId>/manifest.json` etc. Both fall
-// back to localhost so a default-blueprint app boots without env wiring;
-// production builds set them via EXPO_PUBLIC_* at build time.
-export const LIVE_LAYER_ENDPOINT =
-  process.env.EXPO_PUBLIC_LIVE_LAYER_ENDPOINT || "http://localhost:3000/live";
-export const LIVE_LAYER_CODE_PUSH_ID =
-  process.env.EXPO_PUBLIC_LIVE_LAYER_CODE_PUSH_ID || "dev";
 
 // AsyncStorage keys
 export const STORAGE_KEYS = {
   THEME: "user_theme",
   LANGUAGE: "user_language",
   ONBOARDING_COMPLETE: "onboarding_complete",
+  CART_ID: "shopify_cart_id",
+  CUSTOMER_ACCESS_TOKEN: "shopify_customer_token",
+  CUSTOMER_TOKEN_EXPIRES_AT: "shopify_customer_token_expires",
 } as const;
 
 // Feature flags

@@ -61,16 +61,13 @@ export function ThemeProvider({
       return;
     }
 
-    let mounted = true;
     AsyncStorage.getItem(STORAGE_KEYS.THEME).then((saved) => {
-      if (!mounted) return;
       if (saved === "light" || saved === "dark" || saved === "system") {
         console.log("[ThemeProvider] Loaded theme:", saved);
         setThemeState(saved);
       }
       setIsReady(true);
     });
-    return () => { mounted = false; };
   }, []);
 
   // Resolve system theme to light/dark
