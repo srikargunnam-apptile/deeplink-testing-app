@@ -46,7 +46,7 @@ function BaseApp() {
 //   const mode = useLiveLayer(['home', 'mode'], 'upcoming');
 // Change it remotely (no rebuild) with:  tile live-layer set home.mode=latest
 const tileLiveLayerOptions = {
-  appId: '0f84d1f6bf9026ede3209c22',
+  appId: 'ccd774a028fac80d06fbca41',
   env: 'preview',
   baseUrl: 'https://storage.googleapis.com/tile-livelayer-configs',
   bootstrap: tileBootstrap,
@@ -63,7 +63,7 @@ function TileApp(props) {
 
 // --- Auto-wired by `tile init`: Tile Push (OTA / code-push). Same appId. ---
 export default TilePush.wrap({
-  appId: '0f84d1f6bf9026ede3209c22',
+  appId: 'ccd774a028fac80d06fbca41',
   apiUrl: 'https://ota.tile.dev',
   updateStrategy: 'fingerprint',
 })(TileApp);
